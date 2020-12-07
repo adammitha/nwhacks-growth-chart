@@ -1,3 +1,26 @@
+const table = document.getElementById("lengths")
+const addHeightButton = document.getElementById("addHeight")
+
+addHeightButton.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    var row = table.insertRow(-1)
+
+    var cell1 = row.insertCell(0)
+    var cell2 = row.insertCell(1)
+    var cell3 = row.insertCell(2)
+
+    const newDate = document.getElementById("newDate")
+    const newHeight = document.getElementById("newLength")
+
+    cell1.innerHTML = newDate.value
+    cell2.innerHTML = newHeight.value + " cm"
+
+    newDate.value = ""
+    newHeight.value = ""
+
+})
+
 const TENSION = 0.2
 var ctx = document.getElementById("myChart").getContext("2d");
 new Chart(ctx, {

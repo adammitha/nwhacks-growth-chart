@@ -28,7 +28,7 @@
     <hr />
 
 
-        </span> <form>  
+        </span> <form name="add-child-form">  
 
       <div class="form-group">
       <label for="name-input">Name:</label>
@@ -36,8 +36,8 @@
           type="text" 
           class="form-control" 
           placeholder="Name" 
-          id="name"
-          name="name">
+          id="newChildName"
+          name="newChildName">
       </div>
   
      <div class="form-group">
@@ -85,9 +85,16 @@
       </div>
     </div>
   <div>
-    <button type="submit" class="btn btn-primary">Add</button>
-    </div>
-
+    <button type="button" onclick="getNewChildName()" class="btn btn-primary" id="addChildButton">Add</button>
+  </div>
+     <script>
+       function getNewChildName(){
+         const newChildName = document.getElementById("newChildName").value;
+         window.alert("New child " + newChildName + " was added.");
+         location.href="http://127.0.0.1:5500/account.html";
+       }
+      </script>
+  
     <div>
     <a type="button" href = http://127.0.0.1:5500/account.html class="btn btn-outline-primary">Back</a>
   </div>

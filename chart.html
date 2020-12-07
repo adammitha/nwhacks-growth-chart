@@ -19,12 +19,12 @@
     <div class="container">
       <h1 class="mt-3">Alice</h1>
       <canvas id="myChart" width="400" height="400"></canvas>
-      <script src="chart.js">
+      <script defer src="chart.js">
       </script>
       <div id="data_container">
 
       </div>
-      <table class="table">
+      <table class="table" id="lengths">
         <thead>
           <tr>
             <th>Date</th>
@@ -36,12 +36,16 @@
           <tr>
             <td>September 12, 2020</td>
             <td>55 cm</td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
           </tr>
+          
+        </tbody>
+      </table>
+      <table class="table">
+        <tbody>
           <tr>
-            <td><input class="form-control" type="date" /></td>
-            <td><input class="form-control" type="text" placeholder="Length" /></td>
-            <td><button type="button" class="btn btn-primary">Add</button></td>
+            <td><input class="form-control" type="date" id="newDate" /></td>
+            <td><input class="form-control" type="text" placeholder="Length" id="newLength" /></td>
+            <td><button type="button" class="btn btn-primary" id="addHeight">Add</button></td>
           </tr>
         </tbody>
       </table>
